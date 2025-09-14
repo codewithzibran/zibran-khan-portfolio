@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zibran Khan — Web Developer</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- FontAwesome (icons) -->
+  <script src="https://kit.fontawesome.com/a2d9b9f5a6.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --accent: #f59e0b;
+    }
+
+    .chat-toggle {
+      bottom: 28px;
+      right: 28px;
+    }
+
+    .toast {
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .nice-scroll::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+    }
+
+    .nice-scroll::-webkit-scrollbar-thumb {
+      background: rgb(236, 105, 105);
+      border-radius: 8px;
+    }
+
+    /* small responsive tweak for chat width */
+    @media (max-width:640px) {
+      #chatWidget {
+        right: 12px;
+        left: 12px;
+        width: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 leading-relaxed overflow-x-hidden">
+
+
+
+  <!-- NAV -->
+  <header
+    class="sticky top-0 z-40 bg-gradient-to-r from-purple-800 via-indigo-900 to-blue-900 backdrop-blur-sm border-b border-transparent">
+    <!-- <header class="sticky top-0 z-40 backdrop-blur-sm border-b border-gray-800" style="background-color: #4B0082CC;"> -->
+
+
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-white/8 flex items-center justify-center text-lg font-semibold">ZK</div>
+        <div>
+          <div class="font-bold text-lg">Zibran Khan</div>
+          <div class="text-xs text-gray-200">Web Developer — HTML · CSS · JS · WordPress · Hosting</div>
+        </div>
+      </div>
+
+      <nav class="space-x-4 text-sm hidden md:block">
+        <a href="#skills"
+          class="inline-block hover:text-white hover:scale-110 hover:bg-pink-400 transition-transform duration-300 ease-in-out cursor-pointer">Skills</a>
+        <a href="#services"
+          class="inline-block hover:text-white hover:scale-110 hover:bg-pink-400 transition-transform duration-300 ease-in-out cursor-pointer">Services</a>
+        <a href="#projects"
+          class="inline-block hover:text-white hover:scale-110 hover:bg-pink-400 transition-transform duration-300 ease-in-out cursor-pointer">Projects</a>
+        <a href="#testimonials"
+          class="inline-block hover:text-white hover:scale-110 hover:bg-pink-400 transition-transform duration-300 ease-in-out cursor-pointer">Testimonials</a>
+        <a href="#contact"
+          class="inline-block hover:text-white hover:scale-110 hover:bg-pink-400 transition-transform duration-300 ease-in-out cursor-pointer">Contact</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="mobileMenuBtn" class="p-2 rounded bg-white/5 text-sm">Menu</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- spider man system  -->
+
+ <div id="particles-js" class="hidden md:block"></div>
+
+
+  <style>
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      background: #0d1117;
+      pointer-events: none;
+      /* এটা overlay elements block করবে না */
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "detect_on": "window", // canvas থেকে window-এ change করে
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": false }
+        },
+        "modes": {
+          "grab": {
+            "distance": 200,
+            "line_linked": { "opacity": 1 }
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+  <!-- spider man system  -->
+
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- HERO -->
+    <section class="rounded-2xl p-8 md:p-12 bg-gradient-to-r from-sky-600 to-violet-700 shadow-2xl" data-aos="fade-up">
+      <div class="md:flex md:items-center md:justify-between">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold">Hi — I'm <span class="underline decoration-white/30">Zibran
+              Khan</span></h1>
+          <p class="mt-4 text-gray-100/90 max-w-xl">
+            Professional web developer building fast, secure and conversion-focused websites.
+            Expert in HTML, CSS, JavaScript, WordPress, Hosting setup and WordPress troubleshooting.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3 items-center">
+            <!-- MAIN -->
+
+            <!-- Hire Me Button -->
+            <a href="#contact" class="ml-2 inline-block px-4 py-2 bg-white text-gray-900 rounded-md font-medium transition transform 
+   hover:scale-105 hover:bg-yellow-400 hover:text-white animate-pulse">
+              Hire Me
+            </a>
+            <!-- Hire Me Button -->
+
+            <button id="viewServices"
+              class="ml-2 px-4 py-2 bg-transparent border border-white/10 rounded text-sm hover:scale-105 hover:bg-pink-400 hover:text-white">View
+              Services</button>
+          </div>
+
+          <div class="mt-6 text-sm text-gray-100/80">
+            <a href="#" class="underline mr-3 hover:scale-105 hover:bg-pink-400 hover:text-white">GitHub</a>
+            <a href="#" class="underline mr-3 hover:scale-105 hover:bg-pink-400 hover:text-white">LinkedIn</a>
+            <a href="#" class="underline hover:scale-105 hover:bg-pink-400 hover:text-white">Download CV</a>
+          </div>
+        </div>
+
+        <!-- আগে এখানে ছবি ছিলো, এখন Quick stats -->
+        <aside class="mt-8 md:mt-0 md:ml-8 bg-white/5 p-6 rounded-2xl glass w-full md:w-96" data-aos="fade-left">
+          <h3 class="text-sm text-gray-200">Quick stats</h3>
+          <div class="mt-4 grid grid-cols-2 gap-4">
+            <div class="p-4 bg-white/6 rounded">
+              <div class="text-2xl font-bold" id="projectsCount">110+</div>
+              <div class="text-xs text-gray-300">Projects</div>
+            </div>
+            <div class="p-4 bg-white/6 rounded">
+              <div class="text-2xl font-bold">100+</div>
+              <div class="text-xs text-gray-300">Happy Customers</div>
+            </div>
+            <div class="p-4 bg-white/6 rounded">
+              <div class="text-2xl font-bold">4+</div>
+              <div class="text-xs text-gray-300">Years</div>
+            </div>
+            <div class="p-4 bg-white/6 rounded">
+              <div class="text-2xl font-bold">100%</div>
+              <div class="text-xs text-gray-300">Satisfaction</div>
+            </div>
+          </div>
+        </aside>
+
+
+        <img src="zibran-.png" alt="My Photo" width="250" style="margin-right: -30px; border-radius: 10%;">
+
+
+
+      </div>
+    </section>
+
+
+
+    <!-- 3d robot  -->
+    <style>
+      spline-viewer {
+        width: 117%;
+        user-select: none;
+        pointer-events: none;
+        height: 317px;
+        overflow: hidden;
+        position: absolute;
+        top: 340px;
+        left: -170px;
+      }
+    </style>
+
+    <img src="black.jpg" alt="" id="movable-img"
+      style="position: absolute; right: 0; top: 604px; width: 150px; z-index: 9999;"
+      class="hidden md:block">
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+
+    <div class="bg-main-container hidden md:block">
+      <div class="bg-main">
+        <spline-viewer url="https://prod.spline.design/BoWg-dch2T9e59sl/scene.splinecode"></spline-viewer>
+      </div>
+    </div>
+    </div>
+    <script>
+      function toggleMenu() {
+        const hamburger = document.querySelector('.hamburger');
+
+        hamburger.classList.toggle('open');
+      };
+    </script>
+    <!-- 3d robot  -->
+
+    <!-- 3d robot 2 -->
+
+    <!DOCTYPE html>
+    <html lang="en" style="overflow-x: hidden;">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Modern Website</title>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+      <div class="background-elements"></div>
+
+    </body>
+
+    </html>
+
+    <!-- 3d robot 2 -->
+
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: #111827;
+        color: #d1d5db;
+        font-family: Arial, sans-serif;
+        padding: 2rem;
+      }
+
+      h2 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      /* Section Titles */
+      #skills h2 {
+        font-size: 1.875rem;
+        /* text-3xl */
+        color: #f59e0b;
+        text-align: center;
+      }
+
+      #services h2 {
+        font-size: 1.5rem;
+        /* text-2xl */
+        margin-bottom: 1.5rem;
+        color: #f59e0b;
+        text-align: center;
+      }
+
+      #projects h2 {
+        font-size: 1.5rem;
+        /* text-2xl */
+        margin-bottom: 1rem;
+        color: #fbbf24;
+        text-align: center;
+      }
+
+      /* Paragraph colors */
+      #skills p,
+      #services p,
+      #projects p {
+        color: #9ca3af;
+        max-width: 600px;
+        margin-bottom: 1rem;
+      }
+
+      #projects p {
+        margin-top: 0.5rem;
+        color: #9ca3af;
+        text-align: center;
+      }
+
+      /* Grid layouts */
+      #skills .grid {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      #services .grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      #services .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      #services .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 1.5rem;
+      }
+
+      #projects .grid {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+
+      /* Cards styling */
+      .card {
+        background-color: #1f2937;
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        color: #d1d5db;
+        user-select: none;
+        opacity: 0;
+        transform: translateX(50px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* AOS animation in */
+      .card.aos-animate {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+        transition-property: opacity, transform;
+        transition-duration: 1s;
+      }
+
+      /* Hover Zoom */
+      .card.aos-animate:hover {
+        transform: translateX(0) scale(1.05);
+        box-shadow: 0 20px 30px -5px rgba(251, 191, 36, 0.7);
+        z-index: 10;
+      }
+
+      /* Headings inside cards */
+      .card h3,
+      .card h4 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #fbbf24;
+      }
+
+      .card h4 {
+        font-size: 1.125rem;
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+      }
+
+      /* Text inside cards */
+      .card p {
+        margin: 0;
+        color: #d1d5db;
+        flex-grow: 1;
+      }
+
+      .card p.text-xs {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        margin-top: 0.5rem;
+      }
+
+      /* Lists inside project cards */
+      .card ul {
+        color: #9ca3af;
+        margin-top: 0.75rem;
+        padding-left: 1.25rem;
+        font-size: 0.75rem;
+      }
+
+      .card ul li {
+        margin-bottom: 0.25rem;
+      }
+
+      /* Additional text */
+      .text-xs {
+        font-size: 0.75rem;
+        color: #9ca3af;
+      }
+
+      /* Image styles */
+      #skills-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        user-select: none;
+      }
+
+
+      /* Skills এবং Services এর কার্ডে zoom এবং pointer যোগ */
+      #skills .p-6,
+      #services .p-6 {
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      #skills .p-6:hover,
+      #services .p-6:hover {
+        transform: scale(1.05);
+        box-shadow: 0 20px 30px -5px rgba(251, 191, 36, 0.7);
+        z-index: 10;
+      }
+    </style>
+    </head>
+
+    <body>
+
+
+
+
+      <!-- SKILLS -->
+
+      <section id="skills" class="mt-12" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+        <p class="text-gray-400 max-w-2xl mb-6">Core technologies and professional services I provide.</p>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo"
+              class="mx-auto mb-4 w-40 h-40 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">HTML</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Semantic markup & accessibility</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right" data-aos-delay="100">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo"
+              class="mx-auto mb-4 w-40 h-40 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">CSS</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Responsive, Tailwind, animations</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left" data-aos-delay="200">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo"
+              class="mx-auto mb-4 w-40 h-40 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">JavaScript</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Vanilla JS & small interactions</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left" data-aos-delay="300">
+            <img src="wordpress_logo.png" alt="WordPress Logo" class="mx-auto mb-4 w-40 h-40 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">WordPress</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Themes, CPTs, plugins</p>
+          </div>
+
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right">
+            <img src="6578716.jpg" alt="Hosting Setup Logo" class="mx-auto mb-4 w-50 h-50 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">Hosting Setup</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">cPanel, VPS, Cloudflare, deployment</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right" data-aos-delay="100">
+            <img src="255824-P4LS89-965.jpg" alt="WP Problem Solving Logo"
+              class="mx-auto mb-4 w-50 h-50 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">WP Problem Solving</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Bugfix, speed, security</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left" data-aos-delay="200">
+            <img src="320049-P9G86I-832.jpg" alt="Chatbot Logo" class="mx-auto mb-4 w-50 h-50 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">Chatbot / Notifications</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Order chatbot, webhook notifications</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left" data-aos-delay="300">
+            <img src="2885174.jpg" alt="Plugin Dev Logo" class="mx-auto mb-4 w-50 h-50 object-contain" />
+            <h4 class="font-semibold text-center text-yellow-500">Plugin Dev</h4>
+            <p class="text-xs text-gray-400 mt-2 text-center">Custom WP plugins & integration</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+
+      <section id="services" class="mt-12 bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+        <h2 class="text-2xl font-semibold mb-4">Services — what I can do for you</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right">
+            <img src="happy-diverse-people-holding-wed-design-board.jpg" alt="Custom Websites"
+              class="mx-auto mb-4 w-70 h-60 object-contain" />
+            <h2 class="font-semibold text-center text-yellow-500">Custom Websites</h2>
+            <p class="text-gray-300 mt-2 text-center">Fast & responsive sites tuned for conversions and SEO.</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-up" data-aos-delay="100">
+            <img src="website-hosting-concept-with-screen.jpg" alt="Hosting & Deployment"
+              class="mx-auto mb-4 w-70 h-60 object-contain" />
+            <h2 class="font-semibold text-center text-yellow-500">Hosting & Deployment</h2>
+            <p class="text-gray-300 mt-2 text-center">Complete setup: domain, DNS, SSL, email, backups.</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left" data-aos-delay="200">
+            <img src="6105688.jpg" alt="WordPress Support" class="mx-auto mb-4 w-70 h-60 object-contain" />
+            <h2 class="font-semibold text-center text-yellow-500">WordPress Support</h2>
+            <p class="text-gray-300 mt-2 text-center">Bug fixing, speed optimization, security hardening.</p>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-right">
+            <img src="113.jpg" alt="Chatbot & Order Notifications" class="mx-auto mb-4 w-100 h-100 object-contain" />
+            <h2 class="font-semibold text-center text-yellow-500">Custom Chatbot & Order Notifications</h2>
+            <p class="text-gray-300 mt-2 text-center">Integrate chat for customer questions and allow quick order
+              placement. Notifications are sent to your email or webhook immediately.</p>
+          </div>
+          <div class="p-6 bg-gray-700 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+            data-aos="fade-left">
+            <img src="ui-ux-representations-with-laptop.jpg" alt="Custom Plugin Development"
+              class="mx-auto mb-4 w-85 h-80 object-contain" />
+            <h2 class="font-semibold text-center text-yellow-500">Custom Plugin Development</h2>
+            <p class="text-gray-300 mt-2 text-center">I create lightweight WP plugins for custom features and provide
+              installable plugin files.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- PROJECTS -->
+
+      <section id="projects" class="mt-12" data-aos="fade-up">
+        <h2>Selected Projects</h2>
+        <p>Below are a few highlights — I've completed 110+ projects across different industries.</p>
+
+        <div class="grid">
+          <article class="card" data-aos="fade-right">
+            <img src="8252880.jpg" alt="E-commerce — Brand A" class="project-img1" />
+            <h4>E-commerce — Brand A</h4>
+            <p>WooCommerce store, custom checkout, payment gateway integration, fast checkout UX.</p>
+          </article>
+
+          <article class="card" data-aos="fade-up" data-aos-delay="200">
+            <img src="2623136.jpg" alt="Marketing Site — Agency B" class="project-img2" />
+            <h4>Marketing Site — Agency B</h4>
+            <p>Landing pages, analytics setup and accessibility improvements.</p>
+          </article>
+
+          <article class="card" data-aos="fade-left" data-aos-delay="400">
+            <img src="2056745.jpg" alt="SaaS Landing — Startup C" class="project-img3" />
+            <h4>SaaS Landing — Startup C</h4>
+            <p>High-converting microcopy, A/B idea, performance tuning.</p>
+          </article>
+
+          <!-- Personal Portfolio -->
+
+          <article class="card" data-aos="zoom-in" data-aos-delay="600">
+            <img src="10409833.jpg" alt="Personal Portfolio" class="project-img4" />
+            <h4>Personal Portfolio</h4>
+            <p>
+              A dedicated portfolio style website showcasing projects, downloadable portfolio PDF, interactive chatbot
+              for inquiries. Built with SEO, fast loading, and admin-friendly WordPress support.
+            </p>
+
+            <ul>Role: Creator & Developer — Timeline: 1 weeks </ul>
+          </article>
+
+          <!-- Book Website -->
+
+          <article class="card" data-aos="zoom-in" data-aos-delay="800">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
+              alt="Book Website" class="project-img" />
+            <h4>Book Website</h4>
+            <p>
+              A dedicated book-style website, case studies, downloadable Book PDF, interactive chatbot for inquiries,
+              and plugin integration. Built with SEO, fast loading, and admin-friendly WordPress support.
+            </p>
+
+            <ul>Role: Creator & Developer — Timeline: 1 weeks</ul>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- AOS JS -->
+
+      <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 1000,
+          once: true,
+        });
+      </script>
+
+    </body>
+
+</html>
+
+
+
+<!-- Projects Section with Zoom-on-Hover -->
+
+<style>
+  .project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .project-img1 {
+    width: 100%;
+    height: 231px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img1:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .project-img2 {
+    width: 100%;
+    height: 231px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img2:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .project-img3 {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img3:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .project-img4 {
+    width: 100%;
+    height: 214px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .project-img4:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+</style>
+
+<section id="projects" class="mt-12 px-4 max-w-7xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-bold mb-6 text-yellow-400">Selected Projects</h2>
+  <p class="text-gray-400 max-w-2xl mb-8">
+    Below are a few highlights — I've completed 110+ projects across different industries.
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="fade-right">
+      <img src="8252880.jpg" alt="E-commerce Redesign" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">E-commerce Redesign</h4>
+      <p class="text-gray-300 mb-3">WooCommerce store, custom checkout, payment gateway integration, fast checkout UX.
+      </p>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="fade-up">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+        alt="Smart Home Control Interface" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Smart Home Control Interface</h4>
+      <p class="text-gray-300 mb-3">Custom dashboard with IoT integration for smart home devices.</p>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="fade-left">
+      <img src="4520928.jpg" alt="Restaurant Ordering System" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Restaurant Ordering System</h4>
+      <p class="text-gray-300 mb-3">Streamlined ordering UI for better customer experience and kitchen management.</p>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+        alt="Fitness Tracker Dashboard" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Fitness Tracker Dashboard</h4>
+      <p class="text-gray-300 mb-3">Interactive dashboard to monitor fitness activities and goals.</p>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="https://avatars.githubusercontent.com/u/9919?s=400&v=4" alt="GitHub Profile" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">GitHub Profile - CodeWithZibran</h4>
+      <p class="text-gray-300 mb-3">My GitHub repositories and open-source contributions.</p>
+      <a href="https://github.com/codewithzibran" target="_blank" class="text-yellow-400 hover:underline">Visit
+        GitHub</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="Diabetes Friendly Deshi Meals.png" alt="Deshifit Website" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Deshifit Website</h4>
+      <p class="text-gray-300 mb-3">A health and fitness website I developed.</p>
+      <a href="https://deshifit.netlify.app" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="63693.jpg" alt="Calculator" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Digital Calculator</h4>
+      <p class="text-gray-300 mb-3">Growth Your Business</p>
+      <a href="https://zibrancalculator.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="61340.jpg" alt="QR Code Scanner" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">QR Code Scanner</h4>
+      <p class="text-gray-300 mb-3">Scan Your Everything and Download Your Document</p>
+      <a href="https://zibranqrcode.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+  
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="moneycode.jpg" alt="Book Website" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Book Website</h4>
+      <p class="text-gray-300 mb-3">Moneycode Academy — Learn skills</p>
+      <a href="https://zibranmoneycode.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="digital website.jpg" alt="Digital Website" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Digital e-commerce Website</h4>
+      <p class="text-gray-300 mb-3">Growth Your Online Business</p>
+      <a href="https://zibrandemo1.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="book website.jpg" alt="Book Website" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Book Website</h4>
+      <p class="text-gray-300 mb-3">Reading Is fascinating</p>
+      <a href="https://zibranbook.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+    <article class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-yellow-400 transition-shadow duration-300"
+      data-aos="zoom-in">
+      <img src="phlox business website.jpg" alt="Business Website" class="project-img mb-4" />
+      <h4 class="font-semibold text-white mb-2">Business Website</h4>
+      <p class="text-gray-300 mb-3">Now Engaging More, Refreshing Result</p>
+      <a href="https://zibrandemo3.netlify.app/" target="_blank" class="text-yellow-400 hover:underline">Visit Site</a>
+    </article>
+
+  </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section id="testimonials" class="mt-12" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-4">Happy Customers</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-right">
+      <p>"Great work — fast and professional. Delivered above expectation."</p>
+      <p class="text-yellow-400 mt-2">— Client, E-commerce</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+      <p>"Clear communication and excellent attention to detail."</p>
+      <p class="text-yellow-400 mt-2">— Client, SaaS</p>
+    </div>
+    <div class="bg-gray-800 p-6 rounded-lg" data-aos="fade-left">
+      <p>"Our site speed improved significantly after the revamp."</p>
+      <p class="text-yellow-400 mt-2">— Client, Agency</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="mt-12 bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+  <p class="text-gray-300 mb-4">Ready to start? Send a message or use the chatbot (bottom-right) to place quick orders.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form id="contactForm" action="https://formspree.io/f/xeoznogj" method="POST" class="space-y-4" data-aos="fade-up"
+      data-aos-delay="200">
+      <input name="type" type="hidden" value="contact" />
+      <input required name="name" placeholder="Your name" class="w-full p-3 rounded bg-white/5" />
+      <input required type="email" name="email" placeholder="Your email" class="w-full p-3 rounded bg-white/5" />
+      <textarea required name="message" placeholder="How can I help?"
+        class="w-full p-3 rounded bg-white/5 h-32"></textarea>
+      <div class="flex items-center gap-3">
+        <button type="submit"
+          class="px-4 py-2 bg-yellow-400 text-gray-900 rounded hover:scale-105 hover:bg-pink-400 hover:text-white">Send
+          message</button>
+        <button id="saveLocalBtn" type="button"
+          class="px-3 py-2 bg-white/5 rounded hover:scale-105 hover:bg-pink-400 hover:text-white">Save to
+          browser</button>
+      </div>
+    </form>
+
+    <div data-aos="fade-up" data-aos-delay="300" class="p-6 bg-gray-700 rounded-lg">
+      <h4 class="font-semibold">Get in touch</h4>
+      <p class="text-sm text-gray-300 mt-2">Email: <a href="mailto:zibrankhanjibon7@gmail.com"
+          class="underline">zibrankhanjibon7@gmail.com</a></p>
+      <p class="text-sm text-gray-300 mt-2">Location: Chittagong, Bangladesh</p>
+      <p class="text-sm text-gray-300 mt-2">Availability: Freelance / Contract — Open</p>
+    </div>
+  </div>
+</section>
+
+<!-- PLUGIN CREATOR -->
+
+<section id="plugin" class="mt-12 bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+  <h2 class="text-2xl font-semibold mb-4">Quick Plugin Creator</h2>
+  <p class="text-gray-300 mb-4">Generate a simple single-file WordPress plugin you can upload to your site. Fill the
+    fields and click <strong>Generate & Download</strong>.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="p-4 bg-gray-700 rounded-lg">
+      <label class="block text-sm mb-2">Plugin Slug (a-z0-9-)</label>
+      <input id="pluginSlug" class="w-full p-2 rounded bg-white/5" placeholder="my-custom-plugin" />
+      <label class="block text-sm mt-4 mb-2">Plugin Name</label>
+      <input id="pluginName" class="w-full p-2 rounded bg-white/5" placeholder="My Custom Plugin" />
+      <label class="block text-sm mt-4 mb-2">Description</label>
+      <textarea id="pluginDesc" class="w-full p-2 rounded bg-white/5 h-24"
+        placeholder="Short description..."></textarea>
+      <label class="block text-sm mt-4 mb-2">Author</label>
+      <input id="pluginAuthor" class="w-full p-2 rounded bg-white/5" placeholder="Zibran Khan" />
+      <div class="mt-4 flex gap-3">
+        <button id="generatePlugin"
+          class="px-4 py-2 bg-yellow-400 text-gray-900 rounded hover:scale-105 hover:bg-pink-400 hover:text-white">Generate
+          & Download</button>
+        <button id="previewPlugin"
+          class="px-4 py-2 bg-white/5 rounded hover:scale-105 hover:bg-pink-400 hover:text-white">Preview Code</button>
+      </div>
+    </div>
+
+    <div class="p-4 bg-gray-700 rounded-lg">
+      <h4 class="font-semibold">Instructions</h4>
+      <ol class="list-decimal pl-5 mt-2 text-gray-300 text-sm">
+        <li>Click <strong>Generate & Download</strong> to get a single PHP file.</li>
+        <li>Go to WordPress admin → Plugins → Add New → Upload Plugin → Choose File → Activate.</li>
+        <li>Contact me if you want custom plugin features — DB, admin page, shortcodes.</li>
+      </ol>
+
+      <div class="mt-6">
+        <h5 class="font-semibold">Last generated</h5>
+        <pre id="lastGenerated" class="mt-2 text-xs text-gray-200 bg-black/10 p-3 rounded h-40 overflow-auto"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- CHAT WIDGET -->
+
+<div id="chatWidget"
+  class="fixed right-6 bottom-6 z-50 w-80 md:w-96 bg-gray-900 border border-gray-800 rounded-xl shadow-xl hidden"
+  role="dialog" aria-label="Zibran Chat">
+  <div class="px-4 py-3 flex items-center justify-between border-b border-gray-800">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded bg-yellow-400 flex items-center justify-center text-gray-900 font-bold">Z</div>
+      <div>
+        <div class="font-semibold">Zibran's Chat</div>
+        <div class="text-xs text-gray-400">Ask or place an order</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="minimizeChatBtn" title="Minimize" class="text-gray-400 hover:text-white" aria-label="Minimize chat"><i
+          class="fa fa-window-minimize"></i></button>
+      <button id="closeChatBtn" title="Close" class="text-gray-400 hover:text-white"
+        aria-label="Close chat">&times;</button>
+    </div>
+  </div>
+
+  <div id="chatBody" class="p-4 max-h-64 overflow-auto space-y-3 nice-scroll" aria-live="polite">
+    <!-- messages -->
+  </div>
+
+  <div class="p-4 border-t border-gray-800">
+    <form id="chatForm" class="flex gap-2" onsubmit="return false;">
+      <input id="chatName" placeholder="Your name" class="flex-1 p-2 rounded bg-white/5" required />
+      <input id="chatEmail" type="email" placeholder="Email (for order)" class="w-36 p-2 rounded bg-white/5" />
+    </form>
+    <div class="mt-2">
+      <textarea id="chatMessage" placeholder="Type message or type /order to make an order"
+        class="w-full p-2 rounded bg-white/5 h-20"></textarea>
+      <div class="mt-2 flex items-center justify-between">
+        <div class="text-xs text-gray-400">Tip: type <strong>/order</strong> to start an order</div>
+        <div class="flex gap-2">
+          <button id="sendChatBtn" class="px-3 py-2 bg-yellow-400 text-gray-900 rounded">Send</button>
+          <button id="placeOrderBtn" class="px-3 py-2 bg-white/5 rounded">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Chat toggle button (always visible) -->
+<!-- Font Awesome CDN -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Chat Toggle Button -->
+
+<button id="openChatBtn"
+  class="fixed chat-toggle p-4 rounded-full bg-yellow-400 text-gray-900 shadow-lg z-50 hover:scale-110 transition-transform duration-300"
+  aria-label="Open chat">
+  <i class="fa-solid fa-message fa-beat"></i>
+</button>
+
+<!-- Toast container -->
+
+<div id="toastContainer" class="fixed left-6 top-6 z-50 space-y-2"></div>
+
+<!-- FOOTER -->
+
+<footer class="py-8 text-center text-sm text-gray-500">
+  © <span id="year"></span> Zibran Khan • Built with ❤️ • HTML · CSS · JavaScript · WordPress
+</footer>
+
+
+<!-- SCRIPTS -->
+
+<script>
+  // Init AOS
+  AOS.init({ duration: 900, once: true });
+
+  // DOM refs
+
+  const openChatBtn = document.getElementById('openChatBtn');
+  const chatWidget = document.getElementById('chatWidget');
+  const closeChatBtn = document.getElementById('closeChatBtn');
+  const minimizeChatBtn = document.getElementById('minimizeChatBtn');
+  const chatBody = document.getElementById('chatBody');
+  const chatName = document.getElementById('chatName');
+  const chatEmail = document.getElementById('chatEmail');
+  const chatMessage = document.getElementById('chatMessage');
+  const sendChatBtn = document.getElementById('sendChatBtn');
+  const placeOrderBtn = document.getElementById('placeOrderBtn');
+  const contactForm = document.getElementById('contactForm');
+  const generateBtn = document.getElementById('generatePlugin');
+  const previewBtn = document.getElementById('previewPlugin');
+  const lastGenerated = document.getElementById('lastGenerated');
+  const saveLocalBtn = document.getElementById('saveLocalBtn');
+
+  // year + counts
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const projectsCountElm = document.getElementById('projectsCount');
+  if (projectsCountElm) projectsCountElm.textContent = '110+';
+
+  // Mobile menu quick
+
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  if (mobileBtn) mobileBtn.addEventListener('click', () => alert('Use the desktop links or scroll to sections.'));
+
+  // Toast helper
+
+  function showToast(message, type = 'info', timeout = 3500) {
+    const el = document.createElement('div');
+    el.className = 'toast px-4 py-2 rounded bg-black/60 border border-white/5 text-sm';
+    if (type === 'success') el.classList.add('border-l-4', 'border-l-green-400');
+    if (type === 'error') el.classList.add('border-l-4', 'border-l-red-500');
+    el.textContent = message;
+    document.getElementById('toastContainer').appendChild(el);
+    setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateY(-6px)'; }, timeout - 300);
+    setTimeout(() => el.remove(), timeout);
+  }
+
+  // Formspree helper
+
+  async function postToFormspree(dataObj) {
+    const endpoint = 'https://formspree.io/f/xeoznogj';
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(dataObj)
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({ error: 'unknown' }));
+        console.error('Formspree error', err);
+        throw new Error('Error sending — check Formspree configuration.');
+      }
+      return await res.json();
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
+  }
+
+
+  /* ---------------- Contact form (AJAX) ---------------- */
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const payload = Object.fromEntries(formData.entries());
+      try {
+        await postToFormspree(payload);
+        showToast('Message sent — I will reply soon!', 'success');
+        contactForm.reset();
+      } catch (err) {
+        showToast('Failed to send message. Try again later.', 'error');
+      }
+    });
+  }
+
+  if (saveLocalBtn) {
+    saveLocalBtn.addEventListener('click', () => {
+      const name = contactForm.querySelector('[name=name]').value || '';
+      const email = contactForm.querySelector('[name=email]').value || '';
+      const message = contactForm.querySelector('[name=message]').value || '';
+      localStorage.setItem('cf_saved', JSON.stringify({ name, email, message, when: new Date().toISOString() }));
+      showToast('Saved to browser storage', 'success');
+    });
+  }
+
+
+  //  Smooth Scroll JS ... View Services
+
+  document.getElementById("viewServices").addEventListener("click", function () {
+    document.getElementById("services").scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+
+
+  /* ---------------- Chat widget logic (open/close/minimize) ---------------- */
+
+  function openChat() {
+    chatWidget.classList.remove('hidden');
+    openChatBtn.classList.add('hidden');
+    loadChatHistory();
+  }
+  function closeChatUI() {
+    chatWidget.classList.add('hidden');
+    openChatBtn.classList.remove('hidden');
+  }
+  function minimizeChat() {
+    chatWidget.classList.toggle('hidden');
+    openChatBtn.classList.toggle('hidden');
+  }
+
+
+  // attach safe handlers (check existence)
+
+  if (openChatBtn) openChatBtn.addEventListener('click', openChat);
+  if (closeChatBtn) closeChatBtn.addEventListener('click', closeChatUI);
+  if (minimizeChatBtn) minimizeChatBtn.addEventListener('click', minimizeChat);
+
+
+  // chat messages / history
+
+  function addMessage(text, who = 'bot') {
+    const wrap = document.createElement('div');
+    wrap.className = who === 'bot' ? 'text-left' : 'text-right';
+    const bubble = document.createElement('div');
+    bubble.className = (who === 'bot' ? 'inline-block bg-white/6 text-gray-100' : 'inline-block bg-yellow-400 text-gray-900') + ' px-3 py-2 rounded-md';
+    bubble.style.maxWidth = '85%';
+    bubble.textContent = text;
+    wrap.appendChild(bubble);
+    chatBody.appendChild(wrap);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    saveChatHistory();
+  }
+
+  function saveChatHistory() {
+    try {
+      const messages = Array.from(chatBody.children).map(c => ({ html: c.innerHTML, align: c.className }));
+      localStorage.setItem('zk_chat_history', JSON.stringify(messages));
+    } catch (e) { }
+  }
+  function loadChatHistory() {
+    chatBody.innerHTML = '';
+    const raw = localStorage.getItem('zk_chat_history');
+    if (raw) {
+      try {
+        const msgs = JSON.parse(raw);
+        msgs.forEach(m => {
+          const wrap = document.createElement('div');
+          wrap.className = m.align;
+          wrap.innerHTML = m.html;
+          chatBody.appendChild(wrap);
+        });
+        chatBody.scrollTop = chatBody.scrollHeight;
+        return;
+      } catch (e) { console.error(e); }
+    }
+    addMessage('Hello! I am Zibran\'s assistant. Type /order to create an order or ask a question.');
+  }
+
+  // handle send
+
+  async function handleSendMessage() {
+    const name = chatName.value.trim();
+    const email = chatEmail.value.trim();
+    const msg = chatMessage.value.trim();
+    if (!msg) { showToast('Type something first', 'error'); return; }
+    addMessage(msg, 'user');
+
+    if (msg.toLowerCase().startsWith('/order')) {
+      addMessage('Order flow started. Provide: product name, qty, notes. Example: product: Website Basic; qty:1; notes: Need fast delivery', 'bot');
+      chatMessage.value = '';
+      return;
+    }
+
+    setTimeout(() => addMessage('Thanks! I received your message. If this is an order, click "Place Order" below to submit details (it will send an email to the owner).', 'bot'), 600);
+    chatMessage.value = '';
+  }
+
+  if (sendChatBtn) sendChatBtn.addEventListener('click', (e) => { e.preventDefault(); handleSendMessage(); });
+  if (chatMessage) chatMessage.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleSendMessage(); } });
+
+  // place order (sends to Formspree)
+
+  if (placeOrderBtn) placeOrderBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const name = chatName.value.trim();
+    const email = chatEmail.value.trim();
+    const msg = chatMessage.value.trim();
+    if (!name || !email || !msg) { showToast('Please fill name, email and order details before placing order', 'error'); return; }
+
+    const payload = { type: 'order', name, email, message: `ORDER via chatbot:\n${msg}` };
+    try {
+      await postToFormspree(payload);
+      addMessage('✅ Order placed! You will get a confirmation soon. I also emailed the site owner.', 'bot');
+      showToast('Order sent — notification emailed', 'success');
+      chatMessage.value = '';
+    } catch (err) {
+      showToast('Failed to send order. Try again later.', 'error');
+      addMessage('⚠️ Failed to send order. Please try again later or use the contact form.', 'bot');
+    }
+  });
+
+  /* ---------------- Plugin generator ---------------- */
+
+  function sanitizeSlug(s) {
+    return s.toLowerCase().trim().replace(/[^a-z0-9\-]/g, '-').replace(/\-+/g, '-').replace(/^\-|\-$/g, '');
+  }
+  function pluginCode(slug, name, desc, author) {
+    const header = `<?php\n/*\nPlugin Name: ${name}\nPlugin URI:  https://your-site.example\nDescription: ${desc}\nVersion:     1.0.0\nAuthor:      ${author}\nAuthor URI:  https://your-site.example\nText Domain: ${slug}\n*/\n\n`;
+    const body = `if(!defined('ABSPATH')) exit;\n\nclass ${slug.replace(/[^a-z0-9]/gi, '_')}_simple {\n  public function __construct(){\n    add_action('admin_notices', array($this, 'AdminNotice'));\n  }\n  public function AdminNotice(){\n    if(current_user_can('manage_options')){\n      echo '<div class=\"notice notice-success is-dismissible\"><p>${name} active. Need customization? Contact the developer.</p></div>';\n    }\n  }\n}\n\nnew ${slug.replace(/[^a-z0-9]/gi, '_')}_simple();\n`;
+    return header + body;
+  }
+
+  if (previewBtn) previewBtn.addEventListener('click', () => {
+    const slugRaw = document.getElementById('pluginSlug').value || 'my-plugin';
+    const slug = sanitizeSlug(slugRaw);
+    const name = document.getElementById('pluginName').value || 'My Plugin';
+    const desc = document.getElementById('pluginDesc').value || 'A simple plugin';
+    const author = document.getElementById('pluginAuthor').value || 'Zibran Khan';
+    const code = pluginCode(slug, name, desc, author);
+    if (lastGenerated) lastGenerated.textContent = code;
+    showToast('Preview generated below', 'success');
+  });
+
+  if (generateBtn) generateBtn.addEventListener('click', () => {
+    const slugRaw = document.getElementById('pluginSlug').value || 'my-plugin';
+    const slug = sanitizeSlug(slugRaw);
+    const name = document.getElementById('pluginName').value || 'My Plugin';
+    const desc = document.getElementById('pluginDesc').value || 'A simple plugin';
+    const author = document.getElementById('pluginAuthor').value || 'Zibran Khan';
+    const code = pluginCode(slug, name, desc, author);
+    const filename = slug + '.php';
+    const blob = new Blob([code], { type: 'text/x-php' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+    if (lastGenerated) lastGenerated.textContent = code;
+    showToast('Plugin file downloaded. Upload to WP -> Plugins -> Add New -> Upload Plugin.', 'success');
+  });
+
+  /* ---------------- load saved contact ---------------- */
+
+  (function loadSavedContact() {
+    const raw = localStorage.getItem('cf_saved');
+    if (raw) {
+      try {
+        const d = JSON.parse(raw);
+        const nameInput = document.querySelector('#contactForm [name=name]');
+        const emailInput = document.querySelector('#contactForm [name=email]');
+        const msgInput = document.querySelector('#contactForm [name=message]');
+        if (nameInput) nameInput.value = d.name || '';
+        if (emailInput) emailInput.value = d.email || '';
+        if (msgInput) msgInput.value = d.message || '';
+      } catch (e) { }
+    }
+  })();
+
+  // persist last plugin preview
+
+  const observerTarget = document.getElementById('lastGenerated');
+  if (observerTarget) {
+    const obs = new MutationObserver(() => localStorage.setItem('zk_last_plugin', observerTarget.textContent || ''));
+    obs.observe(observerTarget, { childList: true, subtree: true, characterData: true });
+    const lastP = localStorage.getItem('zk_last_plugin');
+    if (lastP) observerTarget.textContent = lastP;
+  }
+
+  // keyboard shortcut to toggle chat (Ctrl/Cmd + K)
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
+      if (chatWidget.classList.contains('hidden')) openChat(); else closeChatUI();
+    }
+  });
+
+  // initialize chat history
+
+  loadChatHistory();
+</script>
+</body>
+
+</html>
